@@ -1,5 +1,7 @@
 package jody_mardika_xiirpl5_24rpl.myapplication;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -10,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -17,10 +20,10 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -58,9 +61,20 @@ public class MainActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        Fragment fragment = null;
 
         //noinspection SimplifiableIfStatement
+        if (id == R.id.nav_about) {
+            fragment = new AboutFragment();
+            setTitle("About");
+        } else if (id == R.id.nav_contact) {
+            fragment = new ContactFragment();
+            setTitle("Contact");
+        }
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commitNow();
 
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
 
         return super.onOptionsItemSelected(item);
     }
@@ -122,7 +136,12 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_eoffice) {
             fragment = new EofficeFragment();
             setTitle("E-OFFICE");
-
+        } else if (id == R.id.nav_about) {
+            fragment = new AboutFragment();
+            setTitle("About");
+        } else if (id == R.id.nav_contact) {
+            fragment = new ContactFragment();
+            setTitle("Contact");
         }
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commitNow();
@@ -130,4 +149,60 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
+
+    public void browser1(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://simop.mitratel.co.id/"));
+        startActivity(browserIntent);
+    }
+
+    public void browser2(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://simpro.mitratel.web.id:8000/new_simpro/"));
+        startActivity(browserIntent);
+    }
+
+    public void browser3(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://pokemon.mitratel.web.id:8092/pokemon"));
+        startActivity(browserIntent);
+    }
+
+    public void browser4(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://simfoni.mitratel.co.id:8091/panjar/"));
+        startActivity(browserIntent);
+    }
+
+    public void browser5(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://sppd.mitratel.co.id/sppdtp/"));
+        startActivity(browserIntent);
+    }
+
+    public void browser6(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://jaguar.mitratel.web.id:8084/login"));
+        startActivity(browserIntent);
+    }
+
+    public void browser7(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://simpro.mitratel.web.id:8000/proj_pmo/"));
+        startActivity(browserIntent);
+    }
+
+    public void browser8(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://simpro.mitratel.web.id:8000/ventura/"));
+        startActivity(browserIntent);
+    }
+
+    public void browser9(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://pmo.mitratel.web.id/new_pmo/new_login.php"));
+        startActivity(browserIntent);
+    }
+
+    public void browser10(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://neweoffice.mitratel.co.id/index.php/site/login"));
+        startActivity(browserIntent);
+    }
+
+    public void browser11(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://simfoni.mitratel.co.id:8091/app/"));
+        startActivity(browserIntent);
+    }
+
 }

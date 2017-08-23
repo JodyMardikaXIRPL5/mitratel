@@ -5,9 +5,13 @@
     tools:context="jody_mardika_xiirpl5_24rpl.myapplication.SimproFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="browser2"
+        android:text="Click here to go to simpro WEBSITE"
+        android:textStyle="bold" />
 </FrameLayout>
