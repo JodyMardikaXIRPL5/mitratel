@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:text="App Versi 1.0 (pre-release)"
+            android:text="App Versi 2.0 (Release)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -26,9 +27,18 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/textView2"
             android:layout_marginTop="30dp"
-            android:text="Beberapa link mungki ada yang tidak bisa dibuka dikarenakan respon dari server dan mungkin masih terdapat beberapa bug di dalam aplikasi ini"
+            android:text="Beberapa link mungkin ada yang tidak bisa dibuka dikarenakan respon dari server dan mungkin masih terdapat beberapa bug di dalam aplikasi ini"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp"
+            app:srcCompat="@drawable/icon" />
 
     </RelativeLayout>
 
