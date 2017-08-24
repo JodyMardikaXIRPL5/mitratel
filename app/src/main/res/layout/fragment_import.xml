@@ -5,9 +5,16 @@
     tools:context="jody_mardika_xiirpl5_24rpl.myapplication.ImportFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
+
+        <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Ini Import" />
+
+    </RelativeLayout>
 
 </FrameLayout>

@@ -5,7 +5,10 @@
     tools:context="jody_mardika_xiirpl5_24rpl.myapplication.Ventura2Fragment">
 
     <!-- TODO: Update blank fragment layout -->
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
@@ -13,5 +16,6 @@
         android:onClick="browser8"
         android:text="Click here to go to PMO Ventura MICRO AND CORE WEBSITE"
         android:textStyle="bold" />
+    </RelativeLayout>
 
 </FrameLayout>

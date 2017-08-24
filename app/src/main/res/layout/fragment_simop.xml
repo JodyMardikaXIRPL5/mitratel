@@ -5,7 +5,10 @@
     tools:context="jody_mardika_xiirpl5_24rpl.myapplication.SimopFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
 
     <Button
         android:id="@+id/button"
@@ -14,4 +17,5 @@
         android:onClick="browser1"
         android:text="Click here to go to SIMOP WEBSITE"
         android:textStyle="bold" />
+    </RelativeLayout>
 </FrameLayout>
