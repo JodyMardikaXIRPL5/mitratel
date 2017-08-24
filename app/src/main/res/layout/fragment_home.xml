@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:text="Swipe left to open the menu"
+            android:text="Swipe from left to right to open the menu"
             android:textSize="14sp" />
 
         <TextView
